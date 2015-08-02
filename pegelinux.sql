@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 02, 2015 at 06:27 PM
+-- Generation Time: Aug 02, 2015 at 06:52 PM
 -- Server version: 5.6.24
 -- PHP Version: 5.6.8
 
@@ -42,7 +42,7 @@ CREATE TABLE IF NOT EXISTS `comment` (
   `id` int(11) NOT NULL,
   `post_id` int(11) NOT NULL,
   `author_id` int(11) unsigned NOT NULL,
-  `content` varchar(512) COLLATE utf8_unicode_ci NOT NULL,
+  `content` longtext COLLATE utf8_unicode_ci NOT NULL,
   `score` double NOT NULL,
   `time_added` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `time_update` datetime NOT NULL,
