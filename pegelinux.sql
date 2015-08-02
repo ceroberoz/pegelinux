@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 02, 2015 at 04:53 PM
+-- Generation Time: Aug 02, 2015 at 06:27 PM
 -- Server version: 5.6.24
 -- PHP Version: 5.6.8
 
@@ -28,7 +28,8 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `category` (
   `id` int(11) NOT NULL,
-  `category` varchar(64) COLLATE utf8_unicode_ci NOT NULL
+  `category` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
+  `total_post` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
@@ -98,6 +99,8 @@ CREATE TABLE IF NOT EXISTS `post` (
   `score` double NOT NULL DEFAULT '0',
   `time_add` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `time_update` datetime NOT NULL,
+  `total_visit` double NOT NULL,
+  `total_comment` double NOT NULL,
   `show_me` tinyint(1) NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
